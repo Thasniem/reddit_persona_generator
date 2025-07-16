@@ -1,0 +1,43 @@
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter or notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+*.env
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output and temp data
+outputs/
+data/
+*.log
+*.tmp
+
+# Model cache files
+*.bin
+*.pt
+*.ckpt
+
+# Transformers / Hugging Face cache
+~/.cache/huggingface
+~/.huggingface
+*.lock
+
+# Mac trash folder
+.Trashes/
