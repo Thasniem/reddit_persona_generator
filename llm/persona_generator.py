@@ -5,7 +5,7 @@ def generate_persona(prompt, generator):
     try:
         output = generator(
             prompt, 
-            max_new_tokens=800, 
+            max_new_tokens=300,  # Reduced from 800 for faster generation
             temperature=0.7,
             do_sample=True,
             pad_token_id=generator.tokenizer.eos_token_id

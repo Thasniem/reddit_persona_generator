@@ -1,10 +1,10 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
 
-def load_model(model_name="microsoft/phi-2"):
+def load_model(model_name="distilgpt2"):
     """
-    Loads the Phi-2 model from Hugging Face using transformers.
-    This model is small and fast, making it ideal for lightweight use cases.
+    Loads DistilGPT2 model from Hugging Face using transformers.
+    This model is very lightweight (~350MB) and fast for low-memory systems.
     """
     try:
         print(f"🔄 Loading model: {model_name} ...")
@@ -22,7 +22,8 @@ def load_model(model_name="microsoft/phi-2"):
         model = AutoModelForCausalLM.from_pretrained(
             model_name, 
             device_map="auto" if device == "cuda" else None,
-            torch_dtype=torch.float16 if device == "cuda" else torch.float32
+            torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+            low_cpu_mem_usage=True  # Optimize for low memory systems
         )
 
         text_gen_pipeline = pipeline(
