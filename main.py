@@ -1,8 +1,3 @@
-def generate_persona(prompt, generator):
-    output = generator(prompt, max_new_tokens=800, temperature=0.7)[0]["generated_text"]
-    return output
-
-
 # main.py (root folder)
 import sys
 from reddit.reddit_scraper import fetch_reddit_data

@@ -2,3 +2,5 @@ requests
 transformers
 accelerate
 tqdm
+torch
+praw
