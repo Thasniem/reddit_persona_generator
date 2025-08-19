@@ -1,0 +1,8 @@
+[DEFAULT]
+# Reddit API Configuration
+# Copy this file to praw.ini and fill in your credentials
+# Get credentials from: https://www.reddit.com/prefs/apps
+
+client_id=your_client_id_here
+client_secret=your_client_secret_here
+user_agent=reddit_persona_generator/1.0 by your_username

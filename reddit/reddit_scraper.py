@@ -9,11 +9,8 @@ def fetch_reddit_data(username, save_path='data/raw_posts_comments.json'):
     """
     try:
         # Initialize Reddit instance (read-only)
-        reddit = praw.Reddit(
-            client_id="your_client_id",  # Replace with your Reddit app client ID
-            client_secret="your_client_secret",  # Replace with your Reddit app secret
-            user_agent="reddit_persona_generator/1.0 by your_username"
-        )
+        # This will automatically read from praw.ini file
+        reddit = praw.Reddit("DEFAULT")
         
         # Get user instance
         user = reddit.redditor(username)

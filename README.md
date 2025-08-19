@@ -6,7 +6,7 @@ This is a 100% free and open-source tool that scrapes Reddit user activity and u
 
 ## 📌 Features
 
-* 🔍 Scrape Reddit posts & comments via **Pushshift API**
+* 🔍 Scrape Reddit posts & comments via **Reddit API (PRAW)**
 * 🤖 Run **LLM-based analysis** using Hugging Face Transformers (`microsoft/phi-2`)
 * 📝 Output detailed **user persona** (age group, personality traits, interests, tone, etc.)
 * 🧾 Cites the Reddit posts/comments used for each trait
@@ -31,7 +31,17 @@ venv\Scripts\activate  # For Windows
 pip install -r requirements.txt
 ```
 
-### 3. Run the script
+### 3. Configure Reddit API
+
+```bash
+# Copy the example configuration file
+copy praw.ini.example praw.ini
+
+# Edit praw.ini with your Reddit API credentials
+# Get credentials from: https://www.reddit.com/prefs/apps
+```
+
+### 4. Run the script
 
 ```bash
 python main.py https://www.reddit.com/user/kojied/
@@ -75,6 +85,8 @@ requests
 transformers
 accelerate
 tqdm
+torch
+praw
 ```
 
 ---
