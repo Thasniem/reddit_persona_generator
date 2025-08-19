@@ -1,10 +1,10 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
 
-def load_model(model_name="distilgpt2"):
+def load_model(model_name="gpt2"):
     """
-    Loads DistilGPT2 model from Hugging Face using transformers.
-    This model is very lightweight (~350MB) and fast for low-memory systems.
+    Loads GPT-2 model from Hugging Face using transformers.
+    This model is ~550MB and provides better quality than DistilGPT2.
     """
     try:
         print(f"🔄 Loading model: {model_name} ...")

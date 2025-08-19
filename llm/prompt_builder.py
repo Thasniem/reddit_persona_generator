@@ -1,18 +1,15 @@
 def build_prompt(formatted_text):
-    return f"""
-You are an expert in personality profiling. Analyze this Reddit user's activity and create a detailed user persona including:
+    return f"""Analyze this Reddit user and create a personality profile:
 
-- Age group
-- Occupation or status
-- Interests/hobbies
-- Personality traits
-- Mood trends
-- Subreddits they visit
-- Writing style
-- Notable quotes (with post/comment snippets)
+USER ANALYSIS:
+Based on the posts and comments below, this Reddit user appears to be:
 
-Cite the source (post title or comment) for each trait.
+AGE: 
+INTERESTS: 
+PERSONALITY: 
+WRITING STYLE: 
 
-User Activity:
+EVIDENCE FROM POSTS:
 {formatted_text}
-"""
+
+DETAILED PERSONA:"""
